@@ -1,0 +1,16 @@
+board: "4bit_adder_with_carry_in_lsb_first"
+stop_on_fail: true
+reset_before_run: true
+tests:
+  - name: "0 and 0 = 0"
+    frame: "00zzzzzzzzzzzzzz"
+    expect: "0xxxxxxxxxxxxxxx"
+  - name: "0 and 1 = 0"
+    frame: "01zzzzzzzzzzzzzz"
+    expect: "0xxxxxxxxxxxxxxx"
+  - name: "1 and 0 = 0"
+    frame: "10zzzzzzzzzzzzzz"
+    expect: "0xxxxxxxxxxxxxxx"
+  - name: "1 and 1 = 1"
+    frame: "11zzzzzzzzzzzzzz"
+    expect: "1xxxxxxxxxxxxxxx"
