@@ -1,0 +1,774 @@
+board: 4bit_divider_with_remainder_msb_first
+stop_on_fail: true
+pins_type: iiiiiiiizzzzzzzzoooooooozzzzzzzz
+input_labels: [A3, A2, A1, A0, B3, B2, B1, B0]
+output_labels: [I3, I2, I1, I0, R3, R2, R1, R0]
+tests:
+- name: 0 / 0 = division by zero
+  input: '00000000'
+  expected: '11110000'
+- name: 0 / 1 = 0, remainder 0
+  input: '00000001'
+  expected: '00000000'
+- name: 0 / 2 = 0, remainder 0
+  input: '00000010'
+  expected: '00000000'
+- name: 0 / 3 = 0, remainder 0
+  input: '00000011'
+  expected: '00000000'
+- name: 0 / 4 = 0, remainder 0
+  input: '00000100'
+  expected: '00000000'
+- name: 0 / 5 = 0, remainder 0
+  input: '00000101'
+  expected: '00000000'
+- name: 0 / 6 = 0, remainder 0
+  input: '00000110'
+  expected: '00000000'
+- name: 0 / 7 = 0, remainder 0
+  input: '00000111'
+  expected: '00000000'
+- name: 0 / 8 = 0, remainder 0
+  input: '00001000'
+  expected: '00000000'
+- name: 0 / 9 = 0, remainder 0
+  input: '00001001'
+  expected: '00000000'
+- name: 0 / 10 = 0, remainder 0
+  input: '00001010'
+  expected: '00000000'
+- name: 0 / 11 = 0, remainder 0
+  input: '00001011'
+  expected: '00000000'
+- name: 0 / 12 = 0, remainder 0
+  input: '00001100'
+  expected: '00000000'
+- name: 0 / 13 = 0, remainder 0
+  input: '00001101'
+  expected: '00000000'
+- name: 0 / 14 = 0, remainder 0
+  input: '00001110'
+  expected: '00000000'
+- name: 0 / 15 = 0, remainder 0
+  input: '00001111'
+  expected: '00000000'
+- name: 1 / 0 = division by zero
+  input: '00010000'
+  expected: '11110001'
+- name: 1 / 1 = 1, remainder 0
+  input: '00010001'
+  expected: '00010000'
+- name: 1 / 2 = 0, remainder 1
+  input: '00010010'
+  expected: '00000001'
+- name: 1 / 3 = 0, remainder 1
+  input: '00010011'
+  expected: '00000001'
+- name: 1 / 4 = 0, remainder 1
+  input: '00010100'
+  expected: '00000001'
+- name: 1 / 5 = 0, remainder 1
+  input: '00010101'
+  expected: '00000001'
+- name: 1 / 6 = 0, remainder 1
+  input: '00010110'
+  expected: '00000001'
+- name: 1 / 7 = 0, remainder 1
+  input: '00010111'
+  expected: '00000001'
+- name: 1 / 8 = 0, remainder 1
+  input: '00011000'
+  expected: '00000001'
+- name: 1 / 9 = 0, remainder 1
+  input: '00011001'
+  expected: '00000001'
+- name: 1 / 10 = 0, remainder 1
+  input: '00011010'
+  expected: '00000001'
+- name: 1 / 11 = 0, remainder 1
+  input: '00011011'
+  expected: '00000001'
+- name: 1 / 12 = 0, remainder 1
+  input: '00011100'
+  expected: '00000001'
+- name: 1 / 13 = 0, remainder 1
+  input: '00011101'
+  expected: '00000001'
+- name: 1 / 14 = 0, remainder 1
+  input: '00011110'
+  expected: '00000001'
+- name: 1 / 15 = 0, remainder 1
+  input: '00011111'
+  expected: '00000001'
+- name: 2 / 0 = division by zero
+  input: '00100000'
+  expected: '11110010'
+- name: 2 / 1 = 2, remainder 0
+  input: '00100001'
+  expected: '00100000'
+- name: 2 / 2 = 1, remainder 0
+  input: '00100010'
+  expected: '00010000'
+- name: 2 / 3 = 0, remainder 2
+  input: '00100011'
+  expected: '00000010'
+- name: 2 / 4 = 0, remainder 2
+  input: '00100100'
+  expected: '00000010'
+- name: 2 / 5 = 0, remainder 2
+  input: '00100101'
+  expected: '00000010'
+- name: 2 / 6 = 0, remainder 2
+  input: '00100110'
+  expected: '00000010'
+- name: 2 / 7 = 0, remainder 2
+  input: '00100111'
+  expected: '00000010'
+- name: 2 / 8 = 0, remainder 2
+  input: '00101000'
+  expected: '00000010'
+- name: 2 / 9 = 0, remainder 2
+  input: '00101001'
+  expected: '00000010'
+- name: 2 / 10 = 0, remainder 2
+  input: '00101010'
+  expected: '00000010'
+- name: 2 / 11 = 0, remainder 2
+  input: '00101011'
+  expected: '00000010'
+- name: 2 / 12 = 0, remainder 2
+  input: '00101100'
+  expected: '00000010'
+- name: 2 / 13 = 0, remainder 2
+  input: '00101101'
+  expected: '00000010'
+- name: 2 / 14 = 0, remainder 2
+  input: '00101110'
+  expected: '00000010'
+- name: 2 / 15 = 0, remainder 2
+  input: '00101111'
+  expected: '00000010'
+- name: 3 / 0 = division by zero
+  input: '00110000'
+  expected: '11110011'
+- name: 3 / 1 = 3, remainder 0
+  input: '00110001'
+  expected: '00110000'
+- name: 3 / 2 = 1, remainder 1
+  input: '00110010'
+  expected: '00010001'
+- name: 3 / 3 = 1, remainder 0
+  input: '00110011'
+  expected: '00010000'
+- name: 3 / 4 = 0, remainder 3
+  input: '00110100'
+  expected: '00000011'
+- name: 3 / 5 = 0, remainder 3
+  input: '00110101'
+  expected: '00000011'
+- name: 3 / 6 = 0, remainder 3
+  input: '00110110'
+  expected: '00000011'
+- name: 3 / 7 = 0, remainder 3
+  input: '00110111'
+  expected: '00000011'
+- name: 3 / 8 = 0, remainder 3
+  input: '00111000'
+  expected: '00000011'
+- name: 3 / 9 = 0, remainder 3
+  input: '00111001'
+  expected: '00000011'
+- name: 3 / 10 = 0, remainder 3
+  input: '00111010'
+  expected: '00000011'
+- name: 3 / 11 = 0, remainder 3
+  input: '00111011'
+  expected: '00000011'
+- name: 3 / 12 = 0, remainder 3
+  input: '00111100'
+  expected: '00000011'
+- name: 3 / 13 = 0, remainder 3
+  input: '00111101'
+  expected: '00000011'
+- name: 3 / 14 = 0, remainder 3
+  input: '00111110'
+  expected: '00000011'
+- name: 3 / 15 = 0, remainder 3
+  input: '00111111'
+  expected: '00000011'
+- name: 4 / 0 = division by zero
+  input: '01000000'
+  expected: '11110100'
+- name: 4 / 1 = 4, remainder 0
+  input: '01000001'
+  expected: '01000000'
+- name: 4 / 2 = 2, remainder 0
+  input: '01000010'
+  expected: '00100000'
+- name: 4 / 3 = 1, remainder 1
+  input: '01000011'
+  expected: '00010001'
+- name: 4 / 4 = 1, remainder 0
+  input: '01000100'
+  expected: '00010000'
+- name: 4 / 5 = 0, remainder 4
+  input: '01000101'
+  expected: '00000100'
+- name: 4 / 6 = 0, remainder 4
+  input: '01000110'
+  expected: '00000100'
+- name: 4 / 7 = 0, remainder 4
+  input: '01000111'
+  expected: '00000100'
+- name: 4 / 8 = 0, remainder 4
+  input: '01001000'
+  expected: '00000100'
+- name: 4 / 9 = 0, remainder 4
+  input: '01001001'
+  expected: '00000100'
+- name: 4 / 10 = 0, remainder 4
+  input: '01001010'
+  expected: '00000100'
+- name: 4 / 11 = 0, remainder 4
+  input: '01001011'
+  expected: '00000100'
+- name: 4 / 12 = 0, remainder 4
+  input: '01001100'
+  expected: '00000100'
+- name: 4 / 13 = 0, remainder 4
+  input: '01001101'
+  expected: '00000100'
+- name: 4 / 14 = 0, remainder 4
+  input: '01001110'
+  expected: '00000100'
+- name: 4 / 15 = 0, remainder 4
+  input: '01001111'
+  expected: '00000100'
+- name: 5 / 0 = division by zero
+  input: '01010000'
+  expected: '11110101'
+- name: 5 / 1 = 5, remainder 0
+  input: '01010001'
+  expected: '01010000'
+- name: 5 / 2 = 2, remainder 1
+  input: '01010010'
+  expected: '00100001'
+- name: 5 / 3 = 1, remainder 2
+  input: '01010011'
+  expected: '00010010'
+- name: 5 / 4 = 1, remainder 1
+  input: '01010100'
+  expected: '00010001'
+- name: 5 / 5 = 1, remainder 0
+  input: '01010101'
+  expected: '00010000'
+- name: 5 / 6 = 0, remainder 5
+  input: '01010110'
+  expected: '00000101'
+- name: 5 / 7 = 0, remainder 5
+  input: '01010111'
+  expected: '00000101'
+- name: 5 / 8 = 0, remainder 5
+  input: '01011000'
+  expected: '00000101'
+- name: 5 / 9 = 0, remainder 5
+  input: '01011001'
+  expected: '00000101'
+- name: 5 / 10 = 0, remainder 5
+  input: '01011010'
+  expected: '00000101'
+- name: 5 / 11 = 0, remainder 5
+  input: '01011011'
+  expected: '00000101'
+- name: 5 / 12 = 0, remainder 5
+  input: '01011100'
+  expected: '00000101'
+- name: 5 / 13 = 0, remainder 5
+  input: '01011101'
+  expected: '00000101'
+- name: 5 / 14 = 0, remainder 5
+  input: '01011110'
+  expected: '00000101'
+- name: 5 / 15 = 0, remainder 5
+  input: '01011111'
+  expected: '00000101'
+- name: 6 / 0 = division by zero
+  input: '01100000'
+  expected: '11110110'
+- name: 6 / 1 = 6, remainder 0
+  input: '01100001'
+  expected: '01100000'
+- name: 6 / 2 = 3, remainder 0
+  input: '01100010'
+  expected: '00110000'
+- name: 6 / 3 = 2, remainder 0
+  input: '01100011'
+  expected: '00100000'
+- name: 6 / 4 = 1, remainder 2
+  input: '01100100'
+  expected: '00010010'
+- name: 6 / 5 = 1, remainder 1
+  input: '01100101'
+  expected: '00010001'
+- name: 6 / 6 = 1, remainder 0
+  input: '01100110'
+  expected: '00010000'
+- name: 6 / 7 = 0, remainder 6
+  input: '01100111'
+  expected: '00000110'
+- name: 6 / 8 = 0, remainder 6
+  input: '01101000'
+  expected: '00000110'
+- name: 6 / 9 = 0, remainder 6
+  input: '01101001'
+  expected: '00000110'
+- name: 6 / 10 = 0, remainder 6
+  input: '01101010'
+  expected: '00000110'
+- name: 6 / 11 = 0, remainder 6
+  input: '01101011'
+  expected: '00000110'
+- name: 6 / 12 = 0, remainder 6
+  input: '01101100'
+  expected: '00000110'
+- name: 6 / 13 = 0, remainder 6
+  input: '01101101'
+  expected: '00000110'
+- name: 6 / 14 = 0, remainder 6
+  input: '01101110'
+  expected: '00000110'
+- name: 6 / 15 = 0, remainder 6
+  input: '01101111'
+  expected: '00000110'
+- name: 7 / 0 = division by zero
+  input: '01110000'
+  expected: '11110111'
+- name: 7 / 1 = 7, remainder 0
+  input: '01110001'
+  expected: '01110000'
+- name: 7 / 2 = 3, remainder 1
+  input: '01110010'
+  expected: '00110001'
+- name: 7 / 3 = 2, remainder 1
+  input: '01110011'
+  expected: '00100001'
+- name: 7 / 4 = 1, remainder 3
+  input: '01110100'
+  expected: '00010011'
+- name: 7 / 5 = 1, remainder 2
+  input: '01110101'
+  expected: '00010010'
+- name: 7 / 6 = 1, remainder 1
+  input: '01110110'
+  expected: '00010001'
+- name: 7 / 7 = 1, remainder 0
+  input: '01110111'
+  expected: '00010000'
+- name: 7 / 8 = 0, remainder 7
+  input: '01111000'
+  expected: '00000111'
+- name: 7 / 9 = 0, remainder 7
+  input: '01111001'
+  expected: '00000111'
+- name: 7 / 10 = 0, remainder 7
+  input: '01111010'
+  expected: '00000111'
+- name: 7 / 11 = 0, remainder 7
+  input: '01111011'
+  expected: '00000111'
+- name: 7 / 12 = 0, remainder 7
+  input: '01111100'
+  expected: '00000111'
+- name: 7 / 13 = 0, remainder 7
+  input: '01111101'
+  expected: '00000111'
+- name: 7 / 14 = 0, remainder 7
+  input: '01111110'
+  expected: '00000111'
+- name: 7 / 15 = 0, remainder 7
+  input: '01111111'
+  expected: '00000111'
+- name: 8 / 0 = division by zero
+  input: '10000000'
+  expected: '11111000'
+- name: 8 / 1 = 8, remainder 0
+  input: '10000001'
+  expected: '10000000'
+- name: 8 / 2 = 4, remainder 0
+  input: '10000010'
+  expected: '01000000'
+- name: 8 / 3 = 2, remainder 2
+  input: '10000011'
+  expected: '00100010'
+- name: 8 / 4 = 2, remainder 0
+  input: '10000100'
+  expected: '00100000'
+- name: 8 / 5 = 1, remainder 3
+  input: '10000101'
+  expected: '00010011'
+- name: 8 / 6 = 1, remainder 2
+  input: '10000110'
+  expected: '00010010'
+- name: 8 / 7 = 1, remainder 1
+  input: '10000111'
+  expected: '00010001'
+- name: 8 / 8 = 1, remainder 0
+  input: '10001000'
+  expected: '00010000'
+- name: 8 / 9 = 0, remainder 8
+  input: '10001001'
+  expected: '00001000'
+- name: 8 / 10 = 0, remainder 8
+  input: '10001010'
+  expected: '00001000'
+- name: 8 / 11 = 0, remainder 8
+  input: '10001011'
+  expected: '00001000'
+- name: 8 / 12 = 0, remainder 8
+  input: '10001100'
+  expected: '00001000'
+- name: 8 / 13 = 0, remainder 8
+  input: '10001101'
+  expected: '00001000'
+- name: 8 / 14 = 0, remainder 8
+  input: '10001110'
+  expected: '00001000'
+- name: 8 / 15 = 0, remainder 8
+  input: '10001111'
+  expected: '00001000'
+- name: 9 / 0 = division by zero
+  input: '10010000'
+  expected: '11111001'
+- name: 9 / 1 = 9, remainder 0
+  input: '10010001'
+  expected: '10010000'
+- name: 9 / 2 = 4, remainder 1
+  input: '10010010'
+  expected: '01000001'
+- name: 9 / 3 = 3, remainder 0
+  input: '10010011'
+  expected: '00110000'
+- name: 9 / 4 = 2, remainder 1
+  input: '10010100'
+  expected: '00100001'
+- name: 9 / 5 = 1, remainder 4
+  input: '10010101'
+  expected: '00010100'
+- name: 9 / 6 = 1, remainder 3
+  input: '10010110'
+  expected: '00010011'
+- name: 9 / 7 = 1, remainder 2
+  input: '10010111'
+  expected: '00010010'
+- name: 9 / 8 = 1, remainder 1
+  input: '10011000'
+  expected: '00010001'
+- name: 9 / 9 = 1, remainder 0
+  input: '10011001'
+  expected: '00010000'
+- name: 9 / 10 = 0, remainder 9
+  input: '10011010'
+  expected: '00001001'
+- name: 9 / 11 = 0, remainder 9
+  input: '10011011'
+  expected: '00001001'
+- name: 9 / 12 = 0, remainder 9
+  input: '10011100'
+  expected: '00001001'
+- name: 9 / 13 = 0, remainder 9
+  input: '10011101'
+  expected: '00001001'
+- name: 9 / 14 = 0, remainder 9
+  input: '10011110'
+  expected: '00001001'
+- name: 9 / 15 = 0, remainder 9
+  input: '10011111'
+  expected: '00001001'
+- name: 10 / 0 = division by zero
+  input: '10100000'
+  expected: '11111010'
+- name: 10 / 1 = 10, remainder 0
+  input: '10100001'
+  expected: '10100000'
+- name: 10 / 2 = 5, remainder 0
+  input: '10100010'
+  expected: '01010000'
+- name: 10 / 3 = 3, remainder 1
+  input: '10100011'
+  expected: '00110001'
+- name: 10 / 4 = 2, remainder 2
+  input: '10100100'
+  expected: '00100010'
+- name: 10 / 5 = 2, remainder 0
+  input: '10100101'
+  expected: '00100000'
+- name: 10 / 6 = 1, remainder 4
+  input: '10100110'
+  expected: '00010100'
+- name: 10 / 7 = 1, remainder 3
+  input: '10100111'
+  expected: '00010011'
+- name: 10 / 8 = 1, remainder 2
+  input: '10101000'
+  expected: '00010010'
+- name: 10 / 9 = 1, remainder 1
+  input: '10101001'
+  expected: '00010001'
+- name: 10 / 10 = 1, remainder 0
+  input: '10101010'
+  expected: '00010000'
+- name: 10 / 11 = 0, remainder 10
+  input: '10101011'
+  expected: '00001010'
+- name: 10 / 12 = 0, remainder 10
+  input: '10101100'
+  expected: '00001010'
+- name: 10 / 13 = 0, remainder 10
+  input: '10101101'
+  expected: '00001010'
+- name: 10 / 14 = 0, remainder 10
+  input: '10101110'
+  expected: '00001010'
+- name: 10 / 15 = 0, remainder 10
+  input: '10101111'
+  expected: '00001010'
+- name: 11 / 0 = division by zero
+  input: '10110000'
+  expected: '11111011'
+- name: 11 / 1 = 11, remainder 0
+  input: '10110001'
+  expected: '10110000'
+- name: 11 / 2 = 5, remainder 1
+  input: '10110010'
+  expected: '01010001'
+- name: 11 / 3 = 3, remainder 2
+  input: '10110011'
+  expected: '00110010'
+- name: 11 / 4 = 2, remainder 3
+  input: '10110100'
+  expected: '00100011'
+- name: 11 / 5 = 2, remainder 1
+  input: '10110101'
+  expected: '00100001'
+- name: 11 / 6 = 1, remainder 5
+  input: '10110110'
+  expected: '00010101'
+- name: 11 / 7 = 1, remainder 4
+  input: '10110111'
+  expected: '00010100'
+- name: 11 / 8 = 1, remainder 3
+  input: '10111000'
+  expected: '00010011'
+- name: 11 / 9 = 1, remainder 2
+  input: '10111001'
+  expected: '00010010'
+- name: 11 / 10 = 1, remainder 1
+  input: '10111010'
+  expected: '00010001'
+- name: 11 / 11 = 1, remainder 0
+  input: '10111011'
+  expected: '00010000'
+- name: 11 / 12 = 0, remainder 11
+  input: '10111100'
+  expected: '00001011'
+- name: 11 / 13 = 0, remainder 11
+  input: '10111101'
+  expected: '00001011'
+- name: 11 / 14 = 0, remainder 11
+  input: '10111110'
+  expected: '00001011'
+- name: 11 / 15 = 0, remainder 11
+  input: '10111111'
+  expected: '00001011'
+- name: 12 / 0 = division by zero
+  input: '11000000'
+  expected: '11111100'
+- name: 12 / 1 = 12, remainder 0
+  input: '11000001'
+  expected: '11000000'
+- name: 12 / 2 = 6, remainder 0
+  input: '11000010'
+  expected: '01100000'
+- name: 12 / 3 = 4, remainder 0
+  input: '11000011'
+  expected: '01000000'
+- name: 12 / 4 = 3, remainder 0
+  input: '11000100'
+  expected: '00110000'
+- name: 12 / 5 = 2, remainder 2
+  input: '11000101'
+  expected: '00100010'
+- name: 12 / 6 = 2, remainder 0
+  input: '11000110'
+  expected: '00100000'
+- name: 12 / 7 = 1, remainder 5
+  input: '11000111'
+  expected: '00010101'
+- name: 12 / 8 = 1, remainder 4
+  input: '11001000'
+  expected: '00010100'
+- name: 12 / 9 = 1, remainder 3
+  input: '11001001'
+  expected: '00010011'
+- name: 12 / 10 = 1, remainder 2
+  input: '11001010'
+  expected: '00010010'
+- name: 12 / 11 = 1, remainder 1
+  input: '11001011'
+  expected: '00010001'
+- name: 12 / 12 = 1, remainder 0
+  input: '11001100'
+  expected: '00010000'
+- name: 12 / 13 = 0, remainder 12
+  input: '11001101'
+  expected: '00001100'
+- name: 12 / 14 = 0, remainder 12
+  input: '11001110'
+  expected: '00001100'
+- name: 12 / 15 = 0, remainder 12
+  input: '11001111'
+  expected: '00001100'
+- name: 13 / 0 = division by zero
+  input: '11010000'
+  expected: '11111101'
+- name: 13 / 1 = 13, remainder 0
+  input: '11010001'
+  expected: '11010000'
+- name: 13 / 2 = 6, remainder 1
+  input: '11010010'
+  expected: '01100001'
+- name: 13 / 3 = 4, remainder 1
+  input: '11010011'
+  expected: '01000001'
+- name: 13 / 4 = 3, remainder 1
+  input: '11010100'
+  expected: '00110001'
+- name: 13 / 5 = 2, remainder 3
+  input: '11010101'
+  expected: '00100011'
+- name: 13 / 6 = 2, remainder 1
+  input: '11010110'
+  expected: '00100001'
+- name: 13 / 7 = 1, remainder 6
+  input: '11010111'
+  expected: '00010110'
+- name: 13 / 8 = 1, remainder 5
+  input: '11011000'
+  expected: '00010101'
+- name: 13 / 9 = 1, remainder 4
+  input: '11011001'
+  expected: '00010100'
+- name: 13 / 10 = 1, remainder 3
+  input: '11011010'
+  expected: '00010011'
+- name: 13 / 11 = 1, remainder 2
+  input: '11011011'
+  expected: '00010010'
+- name: 13 / 12 = 1, remainder 1
+  input: '11011100'
+  expected: '00010001'
+- name: 13 / 13 = 1, remainder 0
+  input: '11011101'
+  expected: '00010000'
+- name: 13 / 14 = 0, remainder 13
+  input: '11011110'
+  expected: '00001101'
+- name: 13 / 15 = 0, remainder 13
+  input: '11011111'
+  expected: '00001101'
+- name: 14 / 0 = division by zero
+  input: '11100000'
+  expected: '11111110'
+- name: 14 / 1 = 14, remainder 0
+  input: '11100001'
+  expected: '11100000'
+- name: 14 / 2 = 7, remainder 0
+  input: '11100010'
+  expected: '01110000'
+- name: 14 / 3 = 4, remainder 2
+  input: '11100011'
+  expected: '01000010'
+- name: 14 / 4 = 3, remainder 2
+  input: '11100100'
+  expected: '00110010'
+- name: 14 / 5 = 2, remainder 4
+  input: '11100101'
+  expected: '00100100'
+- name: 14 / 6 = 2, remainder 2
+  input: '11100110'
+  expected: '00100010'
+- name: 14 / 7 = 2, remainder 0
+  input: '11100111'
+  expected: '00100000'
+- name: 14 / 8 = 1, remainder 6
+  input: '11101000'
+  expected: '00010110'
+- name: 14 / 9 = 1, remainder 5
+  input: '11101001'
+  expected: '00010101'
+- name: 14 / 10 = 1, remainder 4
+  input: '11101010'
+  expected: '00010100'
+- name: 14 / 11 = 1, remainder 3
+  input: '11101011'
+  expected: '00010011'
+- name: 14 / 12 = 1, remainder 2
+  input: '11101100'
+  expected: '00010010'
+- name: 14 / 13 = 1, remainder 1
+  input: '11101101'
+  expected: '00010001'
+- name: 14 / 14 = 1, remainder 0
+  input: '11101110'
+  expected: '00010000'
+- name: 14 / 15 = 0, remainder 14
+  input: '11101111'
+  expected: '00001110'
+- name: 15 / 0 = division by zero
+  input: '11110000'
+  expected: '11111111'
+- name: 15 / 1 = 15, remainder 0
+  input: '11110001'
+  expected: '11110000'
+- name: 15 / 2 = 7, remainder 1
+  input: '11110010'
+  expected: '01110001'
+- name: 15 / 3 = 5, remainder 0
+  input: '11110011'
+  expected: '01010000'
+- name: 15 / 4 = 3, remainder 3
+  input: '11110100'
+  expected: '00110011'
+- name: 15 / 5 = 3, remainder 0
+  input: '11110101'
+  expected: '00110000'
+- name: 15 / 6 = 2, remainder 3
+  input: '11110110'
+  expected: '00100011'
+- name: 15 / 7 = 2, remainder 1
+  input: '11110111'
+  expected: '00100001'
+- name: 15 / 8 = 1, remainder 7
+  input: '11111000'
+  expected: '00010111'
+- name: 15 / 9 = 1, remainder 6
+  input: '11111001'
+  expected: '00010110'
+- name: 15 / 10 = 1, remainder 5
+  input: '11111010'
+  expected: '00010101'
+- name: 15 / 11 = 1, remainder 4
+  input: '11111011'
+  expected: '00010100'
+- name: 15 / 12 = 1, remainder 3
+  input: '11111100'
+  expected: '00010011'
+- name: 15 / 13 = 1, remainder 2
+  input: '11111101'
+  expected: '00010010'
+- name: 15 / 14 = 1, remainder 1
+  input: '11111110'
+  expected: '00010001'
+- name: 15 / 15 = 1, remainder 0
+  input: '11111111'
+  expected: '00010000'

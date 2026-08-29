@@ -55,5 +55,35 @@ dkms.conf
 *.dwo
 
 
-# python
-.venv
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Editors
+*.swp
+*.swo
+*.bak
+*~
+
+# Logs
+*.log
+
+# Arduino build output
+*.bin
+*.eep
+
+# dev for reverse engineering
+*tmp.txt
