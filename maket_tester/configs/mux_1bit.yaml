@@ -1,0 +1,30 @@
+board: 1bit_mux
+stop_on_fail: true
+pins_type: iiizzzzzzzzzzzzzozzzzzzzzzzzzzzz
+input_labels: [S, A, B]
+output_labels: [And]
+tests:
+- name: S = 0 and B = 0 -> 0
+  input: '000'
+  expected: '0'
+- name: S = 0 and B = 1 -> 1
+  input: '001'
+  expected: '1'
+- name: S = 0 and B = 0 -> 0
+  input: '010'
+  expected: '0'
+- name: S = 0 and B = 1 -> 1
+  input: '011'
+  expected: '1'
+- name: S = 1 and A = 0 -> 0
+  input: '100'
+  expected: '0'
+- name: S = 1 and A = 0 -> 0
+  input: '101'
+  expected: '0'
+- name: S = 1 and A = 1 -> 1
+  input: '110'
+  expected: '1'
+- name: S = 1 and A = 1 -> 1
+  input: '111'
+  expected: '1'
