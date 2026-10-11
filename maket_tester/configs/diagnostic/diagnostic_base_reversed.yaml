@@ -1,0 +1,52 @@
+board: 14_inputs_reversed_cables_diagnostic_base
+stop_on_fail: false
+pins_type: iiiiiiiiiiiiiizzoooooooooooooooo
+input_labels:
+- I0
+- I1
+- I2
+- I3
+- I4
+- I5
+- I6
+- I7
+- I8
+- I9
+- I10
+- I11
+- I12
+- I13
+output_labels:
+- O0(I5)
+- O1(I4)
+- O2(I3)
+- O3(I2)
+- O4(I1)
+- O5(I0)
+- VDD
+- GND
+- O8(I13)
+- O9(I12)
+- O10(I11)
+- O11(I10)
+- O12(I9)
+- O13(I8)
+- O14(I7)
+- O15(I6)
+
+tests:
+  - name: "All Zeros"
+    input: "00000000000000"
+    expected: "0000001000000000"
+
+  - name: "All Ones"
+    input: "11111111111111"
+    expected: "1111111011111111"
+
+  - name: "Alternating Pattern 1"
+    input: "01010101010101"
+    expected: "1010101010101010"
+
+  - name: "Alternating Pattern 2"
+    input: "10101010101010"
+    expected: "0101011001010101"
